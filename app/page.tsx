@@ -11,7 +11,7 @@ export default function Home() {
   const container = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
     target: container,
-    offset: ["start start", "end end"]
+    offset: ["start start", "0.7 0.7"]
   })
   useEffect(() => {
     const lenis = new Lenis()
@@ -24,13 +24,13 @@ export default function Home() {
   }, [])
   return (
 
-    <main ref={container} className="relative h-[400vh]">
+    <main ref={container} className="relative h-[500vh]">
       <Section1 />
       <Footer />
       <Section2 scrollYProgress={scrollYProgress} />
 
       <Section3 scrollYProgress={scrollYProgress} />
-
+      <Section1 />
     </main>
 
   );
@@ -56,11 +56,11 @@ const Section1 = () => {
 
 const Section2 = ({ scrollYProgress }: { scrollYProgress: any }) => {
 
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 0.8]);
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 0]);
   const rotate = useTransform(scrollYProgress, [0, 1], [0, -5]);
   return (
 
-    <motion.div style={{ scale, rotate }} className=" sticky top-0 h-screen bg-[#f1e3a3] text-[3.5vw] flex flex-col items-center justify-center text-red-600 pb-[10vh]">
+    <motion.div style={{ scale, rotate }} className=" sticky top-0 h-screen bg-[#f1e3a3] text-[3.5vw] flex flex-col items-center justify-center text-red-600 pb-3">
 
       <p>Discover the Taste of Cornwall</p>
 
@@ -89,7 +89,7 @@ const Section2 = ({ scrollYProgress }: { scrollYProgress: any }) => {
 
 
 const Section3 = ({ scrollYProgress }: { scrollYProgress: any }) => {
-  const scale = useTransform(scrollYProgress, [0, 1], [0.4, 1.4]);
+  const scale = useTransform(scrollYProgress, [0, 1], [0.1, 1]);
   const rotate = useTransform(scrollYProgress, [0, 1], [5, 0]);
   return (
     <motion.div style={{ scale, rotate }} className="relative h-screen">

@@ -7,6 +7,9 @@ import Footer from "@/app/(components)/footer";
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useEffect, useRef } from "react";
 import Lenis from 'lenis';
+import { pastaShapes } from "./(config)/config";
+import { useScrollTo } from "framer-motion-scroll-to-hook";
+import Link from "next/link";
 export default function Home() {
   const container = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
@@ -30,7 +33,7 @@ export default function Home() {
       <Section2 scrollYProgress={scrollYProgress} />
 
       <Section3 scrollYProgress={scrollYProgress} />
-      <Section1 />
+      <Section4 />
     </main>
 
   );
@@ -39,6 +42,7 @@ export default function Home() {
 
 
 const Section1 = () => {
+  const scrollTo = useScrollTo({ mass: 1, stiffness: 40, type: 'spring' });
   return (
     <div className="h-screen bg-[#C72626] text-[3.5vw] flex flex-col items-center justify-center text-[#40352F]">
       <h1>Kernow Pasta</h1>
@@ -50,6 +54,10 @@ const Section1 = () => {
         height={100}
 
       />
+      <button className=" text-2xl border px-2 pb-1 mt-3 rounded-sm border-[#40352F]"
+        onClick={() => scrollTo(document.querySelector('#pastaShapes'))}>
+        See our pasta shapes
+      </button>
     </div>
   )
 }
@@ -101,3 +109,28 @@ const Section3 = ({ scrollYProgress }: { scrollYProgress: any }) => {
     </motion.div>
   );
 };
+
+
+
+const Section4 = () => {
+  return (
+    <div id="pastaShapes" className="h-screen bg-[#f1e3a3] text-[3.5vw] flex flex-col items-center justify-items-center text-[#40352F]">
+      <h1>Try all of our different pasta shapes</h1>
+      <div className="flex flex-wrap items-center justify-center ">
+        {pastaShapes.map(shape => (
+          <Link href={`/pasta/${shape.name}`} key={shape.name} className=" flex flex-col items-center justify-center">
+            <Image
+              className="w-40 h-40"
+              src={shape.image}
+              alt="img"
+              width={100}
+              height={100}
+            />
+            <p>{shape.name}</p>
+          </Link>
+        ))}
+
+      </div>
+    </div>
+  )
+}

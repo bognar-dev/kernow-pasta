@@ -1,9 +1,9 @@
 export const pastaShapes = [
-  { 
-    image: "farfalle.svg", 
-    name: "Farfalle", 
-    price: 3.75, 
-    weight: "500g", 
+  {
+    image: "farfalle.svg",
+    name: "Farfalle",
+    price: 3.75,
+    weight: "500g",
     recipe: "Creamy Farfalle with Mushrooms and Spinach",
     recipeLong: `
 ### Creamy Farfalle with Mushrooms and Spinach
@@ -29,11 +29,11 @@ export const pastaShapes = [
 8. Toss the cooked Farfalle with the sauce and serve immediately.
 `
   },
-  { 
-    image: "penne.svg", 
-    name: "Penne", 
-    price: 2.50, 
-    weight: "500g", 
+  {
+    image: "penne.svg",
+    name: "Penne",
+    price: 2.50,
+    weight: "500g",
     recipe: "Classic Penne alla Vodka",
     recipeLong: `
 ### Classic Penne alla Vodka
@@ -60,11 +60,11 @@ export const pastaShapes = [
 8. Serve with grated Parmesan and fresh basil.
 `
   },
-  { 
-    image: "pipette.svg", 
-    name: "Pipette", 
-    price: 3.00, 
-    weight: "500g", 
+  {
+    image: "pipette.svg",
+    name: "Pipette",
+    price: 3.00,
+    weight: "500g",
     recipe: "Baked Pipette with Cheese and Sausage",
     recipeLong: `
 ### Baked Pipette with Cheese and Sausage
@@ -91,11 +91,11 @@ export const pastaShapes = [
 9. Let cool slightly before serving.
 `
   },
-  { 
-    image: "ravioli.svg", 
-    name: "Ravioli", 
-    price: 5.50, 
-    weight: "400g", 
+  {
+    image: "ravioli.svg",
+    name: "Ravioli",
+    price: 5.50,
+    weight: "400g",
     recipe: "Ricotta and Spinach Ravioli with Sage Butter",
     recipeLong: `
 ### Ricotta and Spinach Ravioli with Sage Butter
@@ -117,11 +117,12 @@ export const pastaShapes = [
 7. Serve topped with crispy sage leaves and grated Parmesan.
 `
   },
-  { 
-    image: "rigatoni.svg", 
-    name: "Rigatoni", 
-    price: 3.25, 
-    weight: "500g", 
+
+  {
+    image: "rigatoni.svg",
+    name: "Rigatoni",
+    price: 3.25,
+    weight: "500g",
     recipe: "Rigatoni Bolognese",
     recipeLong: `
 ### Rigatoni Bolognese
@@ -150,11 +151,11 @@ export const pastaShapes = [
 9. Serve with grated Parmesan.
 `
   },
-  { 
-    image: "fusilli.svg", 
-    name: "Fusilli", 
-    price: 2.75, 
-    weight: "500g", 
+  {
+    image: "fusilli.svg",
+    name: "Fusilli",
+    price: 2.75,
+    weight: "500g",
     recipe: "Fusilli with Pesto and Cherry Tomatoes",
     recipeLong: `
 ### Fusilli with Pesto and Cherry Tomatoes
@@ -174,11 +175,11 @@ export const pastaShapes = [
 5. Serve with grated Parmesan cheese.
 `
   },
-  { 
-    image: "panzerotto.svg", 
-    name: "Panzerotto", 
-    price: 4.50, 
-    weight: "500g", 
+  {
+    image: "panzerotto.svg",
+    name: "Panzerotto",
+    price: 4.50,
+    weight: "500g",
     recipe: "Stuffed Panzerotto with Ricotta and Ham",
     recipeLong: `
 ### Stuffed Panzerotto with Ricotta and Ham
@@ -201,11 +202,11 @@ export const pastaShapes = [
 6. Serve warm.
 `
   },
-  { 
-    image: "tagliatelle.svg", 
-    name: "Tagliatelle", 
-    price: 4.00, 
-    weight: "500g", 
+  {
+    image: "tagliatelle.svg",
+    name: "Tagliatelle",
+    price: 4.00,
+    weight: "500g",
     recipe: "Tagliatelle Alfredo",
     recipeLong: `
 ### Tagliatelle Alfredo
@@ -228,11 +229,11 @@ export const pastaShapes = [
 7. Serve immediately, garnished with fresh parsley.
 `
   },
-  { 
-    image: "conchiglie.svg", 
-    name: "Conchiglie", 
-    price: 3.00, 
-    weight: "500g", 
+  {
+    image: "conchiglie.svg",
+    name: "Conchiglie",
+    price: 3.00,
+    weight: "500g",
     recipe: "Conchiglie with Creamy Tomato Sauce",
     recipeLong: `
 ### Conchiglie with Creamy Tomato Sauce
@@ -257,11 +258,11 @@ export const pastaShapes = [
 7. Serve with fresh basil leaves as garnish.
 `
   },
-  { 
-    image: "eliche.svg", 
-    name: "Eliche", 
-    price: 2.50, 
-    weight: "500g", 
+  {
+    image: "eliche.svg",
+    name: "Eliche",
+    price: 2.50,
+    weight: "500g",
     recipe: "Eliche with Garlic and Olive Oil",
     recipeLong: `
 ### Eliche with Garlic and Olive Oil
@@ -283,5 +284,33 @@ export const pastaShapes = [
 5. Season with salt and pepper to taste.
 6. Serve with grated Parmesan cheese and garnish with fresh parsley.
 `
+  },
+  {
+    image: "oriciette.svg",
+    name: "Orciette",
+    price: 2.50,
+    weight: "500g",
+    recipe: "Orciette with Garlic and Olive Oil",
+    recipeLong: `
+### Orciette with Garlic and Olive Oil
+
+#### Ingredients:
+- 500g Orciette
+- 4 cloves garlic, thinly sliced
+- 1/4 cup olive oil
+- 1/4 cup grated Parmesan cheese
+- Red pepper flakes to taste
+- Salt and pepper to taste
+- Fresh parsley for garnish
+
+#### Instructions:
+1. Cook Orciette according to package instructions. Drain and set aside.
+2. In a large skillet, heat olive oil over medium heat. Add garlic and cook until golden and fragrant.
+3. Add red pepper flakes and cook for another 30 seconds.
+4. Toss the cooked Orciette with the garlic and olive oil mixture.
+5. Season with salt and pepper to taste.
+6. Serve with grated Parmesan cheese and garnish with fresh parsley.
+`
   }
+
 ];

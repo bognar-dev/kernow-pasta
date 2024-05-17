@@ -55,8 +55,8 @@ const OurStory = () => {
         height={1000}
 
       />
-      <p className="px-20 text-7xl leading-relaxed">Born from a passion for both <span className="px-2 mx-1 py-1 bg-black text-white">Cornish heritage</span> and <span className="px-2 mx-1 py-1 bg-white text-black">Italian cuisine</span>, KernowPasta was founded with a simple mission:
-       <span className="px-2 mx-1 py-1 bg-black text-white">to bring the best of Cornwall to your table.</span>
+      <p className="px-5 md:px-20 text-2xl md:text-7xl leading-relaxed">Born from a passion for both <span className="px-1 mx-1 py-1 bg-black text-white">Cornish heritage</span> and <span className="px-1 mx-1 py-1 bg-white text-black">Italian cuisine</span>, KernowPasta was founded with a simple mission:
+       <span className="px-1 mx-1 py-1 bg-black text-white">to bring the best of Cornwall to your table.</span>
       Our journey began in a small kitchen, experimenting with local ingredients and traditional pasta recipes. Today, we are proud to share our love for Cornish pasta with you.</p>
     </div>
   )
@@ -76,6 +76,7 @@ const Section1 = () => {
       />
       <Button
         onClick={() => scrollTo(document.querySelector('#pastaShapes'))}>
+        
         See our pasta shapes
       </Button>
     </div>
@@ -88,11 +89,11 @@ const Section2 = ({ scrollYProgress }: { scrollYProgress: any }) => {
   const rotate = useTransform(scrollYProgress, [0, 1], [0, -5]);
   return (
 
-    <motion.div style={{ scale, rotate }} className=" sticky top-0 -z-10 h-screen bg-[#f1e3a3] text-[3.5vw] flex flex-col items-center justify-center text-red-600 pb-3">
+    <motion.div style={{ scale, rotate }} className=" text-2xl sticky top-0 -z-10 h-screen bg-[#f1e3a3] text-[3.5vw] flex flex-col items-center justify-center text-red-600 pb-3">
 
-      <p>Discover the Taste of Cornwall</p>
+      <p className="text-2xl">Discover the Taste of Cornwall</p>
 
-      <div className="flex gap-4">
+      <div className=" text-2xl flex gap-4">
 
         <p>in</p>
 
@@ -134,8 +135,8 @@ const Section3 = ({ scrollYProgress }: { scrollYProgress: any }) => {
 
 const Section4 = () => {
   return (
-    <div id="pastaShapes" className=" bg-[#f1e3a3] text-[3.5vw] flex flex-col items-center justify-items-center text-[#40352F] py-48">
-      <h1>Try all of our different pasta shapes</h1>
+    <div id="pastaShapes" className=" bg-[#f1e3a3] text-[3.5vw] flex flex-col items-center justify-items-center text-[#40352F] py-10 md:py-48">
+      <h1 className="text-2xl">Try all of our different pasta shapes</h1>
       <div className="mt-16 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4 items-center justify-center justify-items-stretch">
         {pastaShapes.map(pasta => (
           <Link href={`/pasta/${pasta.name}`} key={pasta.name} className=" flex flex-col items-center justify-center">

@@ -5,7 +5,8 @@ const Button = (props:{onClick?:()=>void,children: React.ReactNode,className?:st
     return (
       
         <button className={cn(' text-2xl border px-2 pb-1 mt-3 rounded-sm border-[#40352F]',props.className)}
-          onClick={props.onClick}>
+          onClick={props.onClick}
+        >
           {props.children}
         </button>
      

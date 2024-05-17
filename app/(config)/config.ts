@@ -1,6 +1,6 @@
 export const pastaShapes = [
   { 
-    image: "Farfalle.svg", 
+    image: "farfalle.svg", 
     name: "Farfalle", 
     price: 3.75, 
     weight: "500g", 
@@ -30,7 +30,7 @@ export const pastaShapes = [
 `
   },
   { 
-    image: "Penne.svg", 
+    image: "penne.svg", 
     name: "Penne", 
     price: 2.50, 
     weight: "500g", 
@@ -61,7 +61,7 @@ export const pastaShapes = [
 `
   },
   { 
-    image: "Pipette.svg", 
+    image: "pipette.svg", 
     name: "Pipette", 
     price: 3.00, 
     weight: "500g", 
@@ -92,7 +92,7 @@ export const pastaShapes = [
 `
   },
   { 
-    image: "Ravioli.svg", 
+    image: "ravioli.svg", 
     name: "Ravioli", 
     price: 5.50, 
     weight: "400g", 
@@ -118,7 +118,7 @@ export const pastaShapes = [
 `
   },
   { 
-    image: "Rigatoni.svg", 
+    image: "rigatoni.svg", 
     name: "Rigatoni", 
     price: 3.25, 
     weight: "500g", 
@@ -151,7 +151,7 @@ export const pastaShapes = [
 `
   },
   { 
-    image: "Fusilli.svg", 
+    image: "fusilli.svg", 
     name: "Fusilli", 
     price: 2.75, 
     weight: "500g", 
@@ -175,7 +175,7 @@ export const pastaShapes = [
 `
   },
   { 
-    image: "Panzerotto.svg", 
+    image: "panzerotto.svg", 
     name: "Panzerotto", 
     price: 4.50, 
     weight: "500g", 
@@ -202,7 +202,7 @@ export const pastaShapes = [
 `
   },
   { 
-    image: "Tagiatelle.svg", 
+    image: "tagiatelle.svg", 
     name: "Tagliatelle", 
     price: 4.00, 
     weight: "500g", 
@@ -229,7 +229,7 @@ export const pastaShapes = [
 `
   },
   { 
-    image: "Conchiglie.svg", 
+    image: "conchiglie.svg", 
     name: "Conchiglie", 
     price: 3.00, 
     weight: "500g", 
@@ -258,7 +258,7 @@ export const pastaShapes = [
 `
   },
   { 
-    image: "Eliche.svg", 
+    image: "eliche.svg", 
     name: "Eliche", 
     price: 2.50, 
     weight: "500g", 

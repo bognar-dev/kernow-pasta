@@ -89,11 +89,11 @@ const Section2 = ({ scrollYProgress }: { scrollYProgress: any }) => {
   const rotate = useTransform(scrollYProgress, [0, 1], [0, -5]);
   return (
 
-    <motion.div style={{ scale, rotate }} className=" md:text-xl sticky top-0 -z-10 h-screen bg-[#f1e3a3] text-[3.5vw] flex flex-col items-center justify-center text-red-600 pb-3">
+    <motion.div style={{ scale, rotate }} className=" md:text-7xl sticky top-0 -z-10 h-screen bg-[#f1e3a3] text-[3.5vw] flex flex-col items-center justify-center text-red-600 pb-3">
 
-      <p className="text-2xl ">Discover the Taste of Cornwall</p>
+      <p className="text-2xl md:text-7xl ">Discover the Taste of Cornwall</p>
 
-      <div className=" text-2xl flex gap-4">
+      <div className=" text-2xl md:text-7xl flex gap-4">
 
         <p>in</p>
 

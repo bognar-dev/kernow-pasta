@@ -137,16 +137,16 @@ const Section4 = () => {
     <div id="pastaShapes" className=" bg-[#f1e3a3] text-[3.5vw] flex flex-col items-center justify-items-center text-[#40352F] py-48">
       <h1>Try all of our different pasta shapes</h1>
       <div className="mt-16 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4 items-center justify-center justify-items-stretch">
-        {pastaShapes.map(shape => (
-          <Link href={`/pasta/${shape.name}`} key={shape.name} className=" flex flex-col items-center justify-center">
+        {pastaShapes.map(pasta => (
+          <Link href={`/pasta/${pasta.name}`} key={pasta.name} className=" flex flex-col items-center justify-center">
             <Image
               className="w-40 h-40"
-              src={shape.image}
+              src={`/${pasta.image}`}
               alt="img"
               width={100}
               height={100}
             />
-            <p>{shape.name}</p>
+            <p>{pasta.name}</p>
           </Link>
         ))}
 

@@ -18,7 +18,7 @@ export default function Page({ params }: { params: { name: string } }) {
   return (
     <div className=" bg-[#C72626] text-[3.5vw] flex flex-col items-center justify-center text-[#40352F] py-20">
       <div className='flex items-center justify-center gap-5 w-full'>
-        <Image className='w-48 h-48' src={pasta.image} width={300} height={300} alt={pasta.name} />
+        <Image className='w-48 h-48' src={`/${pasta.image}`} width={300} height={300} alt={pasta.name} /> 
         <div>
           <h2 className='pb-2 text-[#40352F] text-5xl font-bold'>{pasta.name}</h2>
           <p className='text-[#40352F] text-2xl'>{pasta.price} for {pasta.weight}</p>

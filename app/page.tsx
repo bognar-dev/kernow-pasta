@@ -1,9 +1,9 @@
 "use client"
 import Image from "next/image";
-import TomatoSplash from "/public/tomato-splash.svg";
-import Penne from "/public/Penne.svg";
-import Rigatoni from "/public/Rigatoni.svg";
-import Landscape from "/public/landscape.svg";
+import TomatoSplash from "/tomato-splash.svg";
+import Penne from "/Penne.svg";
+import Rigatoni from "/Rigatoni.svg";
+import Landscape from "/landscape.svg";
 import Footer from "@/app/(components)/footer";
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useEffect, useRef } from "react";

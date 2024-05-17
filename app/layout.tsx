@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import NavBar from "./(components)/nav";
 
 export const metadata: Metadata = {
   title: "Kernow Pasta",
@@ -13,7 +14,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={""}>{children}</body>
+
+      <body className={""}>
+        <NavBar />
+        {children}
+        </body>
     </html>
   );
 }

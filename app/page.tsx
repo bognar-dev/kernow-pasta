@@ -1,8 +1,9 @@
 "use client"
 import Image from "next/image";
-import Penne from "../public/penne.svg";
-import TomatoSplash from "../public/tomato-splash.svg";
-import Rigatoni from "../public/rigatoni.svg";
+import TomatoSplash from "@/public/tomato-splash.svg";
+import Penne from "@/public/Penne.svg";
+import Rigatoni from "@/public/Rigatoni.svg";
+import Landscape from "@/public/landscape.svg";
 import Footer from "@/app/(components)/footer";
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useEffect, useRef } from "react";
@@ -10,6 +11,7 @@ import Lenis from 'lenis';
 import { pastaShapes } from "./(config)/config";
 import { useScrollTo } from "framer-motion-scroll-to-hook";
 import Link from "next/link";
+import Button from "./(components)/button";
 export default function Home() {
   const container = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
@@ -27,9 +29,10 @@ export default function Home() {
   }, [])
   return (
 
-    <main ref={container} className="relative h-[500vh]">
+    <main ref={container} className=" relative z-10">
       <Section1 />
       <Footer />
+      <OurStory />
       <Section2 scrollYProgress={scrollYProgress} />
 
       <Section3 scrollYProgress={scrollYProgress} />
@@ -40,11 +43,28 @@ export default function Home() {
 
 }
 
+const OurStory = () => {
+  return (
+    <div id="OurStory" className="h-screen bg-[#C72626] text-[3.5vw] flex flex-col items-center justify-center gap-8 text-[#40352F] ">
+      <h2 className="text-5xl">Our Story</h2>
+      <Image
+        className="min-w-screen h-40"
+        src={Landscape}
+        alt="img"
+        width={1000}
+        height={1000}
 
+      />
+      <p className="px-20 text-7xl leading-relaxed">Born from a passion for both <span className="px-2 mx-1 py-1 bg-black text-white">Cornish heritage</span> and <span className="px-2 mx-1 py-1 bg-black text-white">Italian cuisine</span>, KernowPasta was founded with a simple mission:
+       <span className="px-2 mx-1 py-1 bg-black text-white">to bring the best of Cornwall to your table.</span>
+      Our journey began in a small kitchen, experimenting with local ingredients and traditional pasta recipes. Today, we are proud to share our love for Cornish pasta with you.</p>
+    </div>
+  )
+}
 const Section1 = () => {
   const scrollTo = useScrollTo({ mass: 1, stiffness: 40, type: 'spring' });
   return (
-    <div className="h-screen bg-[#C72626] text-[3.5vw] flex flex-col items-center justify-center text-[#40352F]">
+    <div id="home" className="h-screen bg-[#C72626] text-[3.5vw] flex flex-col items-center justify-center text-[#40352F]">
       <h1>Kernow Pasta</h1>
       <Image
         className="w-40 h-40"
@@ -54,10 +74,10 @@ const Section1 = () => {
         height={100}
 
       />
-      <button className=" text-2xl border px-2 pb-1 mt-3 rounded-sm border-[#40352F]"
+      <Button
         onClick={() => scrollTo(document.querySelector('#pastaShapes'))}>
         See our pasta shapes
-      </button>
+      </Button>
     </div>
   )
 }
@@ -114,9 +134,9 @@ const Section3 = ({ scrollYProgress }: { scrollYProgress: any }) => {
 
 const Section4 = () => {
   return (
-    <div id="pastaShapes" className="h-screen bg-[#f1e3a3] text-[3.5vw] flex flex-col items-center justify-items-center text-[#40352F]">
+    <div id="pastaShapes" className=" bg-[#f1e3a3] text-[3.5vw] flex flex-col items-center justify-items-center text-[#40352F]">
       <h1>Try all of our different pasta shapes</h1>
-      <div className="flex flex-wrap items-center justify-center ">
+      <div className="mt-16 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4 items-center justify-center justify-items-stretch">
         {pastaShapes.map(shape => (
           <Link href={`/pasta/${shape.name}`} key={shape.name} className=" flex flex-col items-center justify-center">
             <Image

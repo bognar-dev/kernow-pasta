@@ -11,31 +11,31 @@ export default function NavBar() {
     return (
         <nav className=" text-stone-100 mix-blend-difference p-4 flex justify-between items-center fixed w-full top-0 z-30">
             <div className="flex items-center space-x-4 sticky top-0">
-                <h1 className=" text-2xl font-semibold">Kernow Pasta</h1>
+                <h1 className="text-sm md:text-2xl font-semibold">Kernow Pasta</h1>
             </div>
-            <ul className="flex space-x-6 ">
+            <ul className="flex space-x-6 text-sm md:text-2xl">
                 <li>
-                    <Link className="   text-md uppercase tracking-wider hover:text-gray-200" href={isHome ? "" : "/"} onClick={() => scrollTo(document.querySelector('#home'))}>
+                    <Link className="uppercase tracking-wider hover:text-gray-200" href={isHome ? "" : "/"} onClick={() => scrollTo(document.querySelector('#home'))}>
                         Home
                     </Link>
                 </li>
                 <li>
-                    <Link className=" text-md uppercase tracking-wider hover:text-gray-200" href={isHome ? "" : "/"} onClick={() => scrollTo(document.querySelector('#OurStory'))}>
+                    <Link className="uppercase tracking-wider hover:text-gray-200" href={isHome ? "" : "/"} onClick={() => scrollTo(document.querySelector('#OurStory'))}>
                         Our Story
                     </Link>
                 </li>
                 <li>
-                    <Link className=" text-md uppercase tracking-wider hover:text-gray-200" href={isHome ? "" : "/"} onClick={() => scrollTo(document.querySelector('#pastaShapes'))}>
+                    <Link className="uppercase tracking-wider hover:text-gray-200" href={isHome ? "" : "/"} onClick={() => scrollTo(document.querySelector('#pastaShapes'))}>
                         Shop
                     </Link>
                 </li>
                 <li>
-                    <Link className=" text-md uppercase tracking-wider hover:text-gray-200" href="/blog">
+                    <Link className="uppercase tracking-wider hover:text-gray-200" href="/blog">
                         Blog
                     </Link>
                 </li>
                 <li>
-                    <Link className=" text-md uppercase tracking-wider hover:text-gray-200" href="/contact" >
+                    <Link className="uppercase tracking-wider hover:text-gray-200" href="/contact" >
                         Contact
                     </Link>
                 </li>

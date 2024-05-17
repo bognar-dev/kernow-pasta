@@ -45,7 +45,7 @@ export default function Home() {
 
 const OurStory = () => {
   return (
-    <div id="OurStory" className="h-screen bg-[#C72626] text-[3.5vw] flex flex-col items-center justify-center gap-8 text-[#40352F] ">
+    <div id="OurStory" className="h-screen bg-[#C72626] text-[3.5vw] flex flex-col items-center justify-center gap-8 text-[#40352F] pt-8 ">
       <h2 className="text-5xl">Our Story</h2>
       <Image
         className="min-w-screen h-40"
@@ -64,8 +64,8 @@ const OurStory = () => {
 const Section1 = () => {
   const scrollTo = useScrollTo({ mass: 1, stiffness: 40, type: 'spring' });
   return (
-    <div id="home" className="h-screen bg-[#C72626] text-[3.5vw] flex flex-col items-center justify-center text-[#40352F]">
-      <h1>Kernow Pasta</h1>
+    <div id="home" className="h-screen bg-[#C72626] text-2xl flex flex-col items-center justify-center text-[#40352F] gap-3">
+      <h1 className="text-5xl">Kernow Pasta</h1>
       <Image
         className="w-40 h-40"
         src={Rigatoni}

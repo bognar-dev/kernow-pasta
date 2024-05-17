@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import NavBar from "./(components)/nav";
+import ScrollProgress from "./(components)/scroll-progress";
 
 export const metadata: Metadata = {
   title: "Kernow Pasta",
@@ -13,10 +14,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={"scrollbar-hide"}>
 
-      <body className={""}>
+      <body className={"scrollbar-hide"}>
         <NavBar />
+        <ScrollProgress />
         {children}
         </body>
     </html>

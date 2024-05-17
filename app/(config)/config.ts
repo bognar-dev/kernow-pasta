@@ -202,7 +202,7 @@ export const pastaShapes = [
 `
   },
   { 
-    image: "tagiatelle.svg", 
+    image: "tagliatelle.svg", 
     name: "Tagliatelle", 
     price: 4.00, 
     weight: "500g", 

@@ -135,6 +135,7 @@ const Section3 = ({ scrollYProgress }: { scrollYProgress: any }) => {
 
 const Section4 = () => {
   return (
+    
     <div id="pastaShapes" className=" bg-[#f1e3a3] text-[3.5vw] flex flex-col items-center justify-items-center text-[#40352F] py-10 md:py-48">
       <h1 className="text-2xl">Try all of our different pasta shapes</h1>
       <div className="mt-16 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4 items-center justify-center justify-items-stretch">

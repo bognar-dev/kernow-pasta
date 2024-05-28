@@ -149,6 +149,7 @@ const Section4 = () => {
               height={100}
             />
             <p>{pasta.name}</p>
+            
           </Link>
         ))}
 

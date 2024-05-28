@@ -3,7 +3,7 @@
 @tailwind utilities;
 @font-face {
   font-family: 'Regular';
-  src: url('../public/fonts/LeMurmure-Regular.woff2');
+  src: url('../../public/fonts/LeMurmure-Regular.woff2'); 
 }
 
 body{

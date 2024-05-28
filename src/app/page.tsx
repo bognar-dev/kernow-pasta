@@ -1,9 +1,9 @@
 "use client"
 import Image from "next/image";
-import TomatoSplash from "../public/tomato-splash.svg";
-import Penne from "../public/penne.svg";
-import Rigatoni from "../public/rigatoni.svg";
-import Landscape from "../public/landscape.svg";
+import TomatoSplash from "../../public/tomato-splash.svg";
+import Penne from "../../public/penne.svg";
+import Rigatoni from "../../public/rigatoni.svg";
+import Landscape from "../../public/landscape.svg";
 import Footer from "@/app/(components)/footer";
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useEffect, useRef } from "react";
@@ -140,7 +140,7 @@ const Section4 = () => {
       <h1 className="text-2xl">Try all of our different pasta shapes</h1>
       <div className="mt-16 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4 items-center justify-center justify-items-stretch">
         {pastaShapes.map(pasta => (
-          <Link href={`/pasta/${pasta.name}`} key={pasta.name} className=" flex flex-col items-center justify-center">
+          <Link href={`/pasta/${pasta.name}`} key={pasta.image} className=" flex flex-col items-center justify-center">
             <Image
               className="w-40 h-40"
               src={`/${pasta.image}`}
@@ -149,7 +149,7 @@ const Section4 = () => {
               height={100}
             />
             <p>{pasta.name}</p>
-            
+
           </Link>
         ))}
 

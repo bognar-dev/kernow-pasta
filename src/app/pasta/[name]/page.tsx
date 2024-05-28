@@ -33,7 +33,7 @@ export default function Page({ params }: { params: { name: string } }) {
         <h4 className='text-[#40352F] text-2xl'>{pasta.recipe}</h4>
         
       </section>
-      <p className=' prose lg:prose-lg text-[#40352F] font-serif'><CustomMDX source={pasta.recipeLong} /></p>
+      <ol className=' prose lg:prose-lg text-[#40352F] font-serif'><CustomMDX source={pasta.recipeLong} /></ol>
       </div>
     </div>
   )

@@ -3,6 +3,7 @@ import { pastaShapes } from '@/app/(config)/config';
 import { notFound } from 'next/navigation';
 import Button from '@/app/(components)/button';
 import { CustomMDX } from '@/app/(components)/mdx';
+import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server';
 export async function generateStaticParams() {
 
 
@@ -14,6 +15,8 @@ export async function generateStaticParams() {
 
 export default function Page({ params }: { params: { name: string } }) {
   const pasta = pastaShapes.find((pasta) => pasta.name === params.name)
+  
+
   if (!pasta) return notFound()
   return (
     <div className=" bg-[#C72626] text-[3.5vw] flex flex-col items-center justify-center text-[#40352F] pt-20">
@@ -22,7 +25,7 @@ export default function Page({ params }: { params: { name: string } }) {
         <div>
           <h2 className='pb-2 text-[#40352F] text-5xl font-bold'>{pasta.name}</h2>
           <p className='text-[#40352F] text-2xl'>{pasta.price} for {pasta.weight}</p>
-          <Button className='bg-white hover:bg-[#40352F] hover:text-white ease-in-out duration-100'>Buy Now !</Button> 
+          <Button className='bg-white hover:bg-[#40352F] hover:text-white ease-in-out duration-100' onClick={addToCart}>Buy Now !</Button> 
           
         </div>
 

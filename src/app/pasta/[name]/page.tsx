@@ -18,6 +18,13 @@ export default function Page({ params }: { params: { name: string } }) {
   
 
   if (!pasta) return notFound()
+
+    async function addToCart() {
+      'use server'
+      console.log('Add to cart')
+    }
+
+ 
   return (
     <div className=" bg-[#C72626] text-[3.5vw] flex flex-col items-center justify-center text-[#40352F] pt-20">
       <div className='flex items-center justify-center gap-5 w-full h-screen'>
@@ -25,8 +32,9 @@ export default function Page({ params }: { params: { name: string } }) {
         <div>
           <h2 className='pb-2 text-[#40352F] text-5xl font-bold'>{pasta.name}</h2>
           <p className='text-[#40352F] text-2xl'>{pasta.price} for {pasta.weight}</p>
-          <Button className='bg-white hover:bg-[#40352F] hover:text-white ease-in-out duration-100' onClick={addToCart}>Buy Now !</Button> 
-          
+          <form action={addToCart}>
+          <Button className='bg-white hover:bg-[#40352F] hover:text-white ease-in-out duration-100' >Buy Now !</Button> 
+          </form>
         </div>
 
       </div>

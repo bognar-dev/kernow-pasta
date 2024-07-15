@@ -1,10 +1,18 @@
+import * as React from "react"
+ 
 import { cn } from "@/app/(lib)/utils"
+ 
 
-const Button = (props:{onClick?:()=>void,children: React.ReactNode,className?:string}) => { 
+export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  className?: string
+}
+
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ className,  ...props }, ref) => {
     
     return (
       
-        <button className={cn(' text-2xl border px-2 pb-1 mt-3 rounded-sm border-[#40352F]',props.className)}
+        <button className={cn(' text-2xl border px-2 pb-1 mt-3 rounded-sm border-[#40352F]',className)}
           onClick={props.onClick}
         >
           {props.children}
@@ -13,5 +21,7 @@ const Button = (props:{onClick?:()=>void,children: React.ReactNode,className?:st
     )
   }
 
+)
 
+Button.displayName = "Button"
 export default Button

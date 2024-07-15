@@ -35,7 +35,7 @@ export default function Page() {
       </div>
       <div className="grid gap-4">
         <div className="grid grid-cols-[80px_1fr_auto] items-center gap-4">
-            <img
+            <Image
                 src="/placeholder.svg"
                 width="80"
                 height="80"

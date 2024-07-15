@@ -3,7 +3,13 @@ import { useScrollTo } from "framer-motion-scroll-to-hook";
 import Link from "next/link"
 import { usePathname } from "next/navigation";
 import { JSX, SVGProps } from "react"
-
+const categories = [
+    { name: "Home", href: "#home" },
+    { name: "Our Story", href: "#OurStory" },
+    { name: "Shop", href: "#pastaShapes" },
+    { name: "Blog", href: "/blog" },
+    { name: "Contact", href: "/contact" },
+];
 export default function NavBar() {
     const scrollTo = useScrollTo({ mass: 1, stiffness: 40, type: 'spring' });
     const path = usePathname();
@@ -14,31 +20,13 @@ export default function NavBar() {
                 <h1 className="text-sm md:text-2xl font-semibold">Kernow Pasta</h1>
             </div>
             <ul className="flex space-x-6 text-sm md:text-2xl">
-                <li>
-                    <Link className="uppercase tracking-wider hover:text-gray-200" href={isHome ? "" : "/"} onClick={() => scrollTo(document.querySelector('#home'))}>
-                        Home
-                    </Link>
-                </li>
-                <li>
-                    <Link className="uppercase tracking-wider hover:text-gray-200" href={isHome ? "" : "/"} onClick={() => scrollTo(document.querySelector('#OurStory'))}>
-                        Our Story
-                    </Link>
-                </li>
-                <li>
-                    <Link className="uppercase tracking-wider hover:text-gray-200" href={isHome ? "" : "/"} onClick={() => scrollTo(document.querySelector('#pastaShapes'))}>
-                        Shop
-                    </Link>
-                </li>
-                <li>
-                    <Link className="uppercase tracking-wider hover:text-gray-200" href="/blog">
-                        Blog
-                    </Link>
-                </li>
-                <li>
-                    <Link className="uppercase tracking-wider hover:text-gray-200" href="/contact" >
-                        Contact
-                    </Link>
-                </li>
+                {categories.map((category) => (
+                    <li key={category.name}>
+                        <Link className="uppercase tracking-wider hover:text-gray-200" href={isHome ? "" : "/"} onClick={() => scrollTo(document.querySelector(category.href))}>
+                            {category.name}
+                        </Link>
+                    </li>
+                ))}
             </ul>
             <div className="flex items-center space-x-4">
                 <Link href="/cart"><ShoppingCartIcon className="h-6 w-6 " /></Link>

@@ -17,6 +17,8 @@ export default function Page({ params }: { params: { name: string } }) {
   const pasta = pastaShapes.find((pasta) => pasta.name === params.name)
   
 
+  
+
   if (!pasta) return notFound()
 
     async function addToCart() {

@@ -64,10 +64,10 @@ const OurStory = () => {
 const Section1 = () => {
   const scrollTo = useScrollTo({ mass: 1, stiffness: 40, type: 'spring' });
   return (
-    <div id="home" className="h-screen bg-[#C72626] text-2xl flex flex-col items-center justify-center text-[#40352F] gap-3">
-      <h1 className="text-5xl">Kernow Pasta</h1>
+    <div id="home" className="h-screen bg-[#C72626] text-2xl flex flex-col items-center justify-center text-[#e7d0c3] gap-3 select-none">
+      <h1 className="text-9xl ">Pomodoro</h1>
       <Image
-        className="w-40 h-40"
+        className="w-40 h-40 select-none stroke-[#e7d0c3]"
         src={Rigatoni}
         alt="img"
         width={100}
@@ -75,9 +75,10 @@ const Section1 = () => {
 
       />
       <Button
+        className=" px-2 py-1 rounded-sm"
         onClick={() => scrollTo(document.querySelector('#pastaShapes'))}>
         
-        See our pasta shapes
+        See our Menu
       </Button>
     </div>
   )

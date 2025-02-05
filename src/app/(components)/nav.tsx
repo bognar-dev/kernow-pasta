@@ -6,7 +6,7 @@ import { JSX, SVGProps } from "react"
 const categories = [
     { name: "Home", href: "#home" },
     { name: "Our Story", href: "#OurStory" },
-    { name: "Shop", href: "#pastaShapes" },
+    { name: "Menu", href: "#pastaShapes" },
     { name: "Blog", href: "/blog" },
     { name: "Contact", href: "/contact" },
 ];
@@ -15,9 +15,9 @@ export default function NavBar() {
     const path = usePathname();
     const isHome = path === "/";
     return (
-        <nav className=" text-stone-100 mix-blend-difference p-4 flex justify-between items-center fixed w-full top-0 z-30">
+        <nav className=" text-stone-100 mix-blend-plus-lighter p-4 flex justify-between items-center fixed w-full top-0 z-30">
             <div className="flex items-center space-x-4 sticky top-0">
-                <h1 className="text-sm md:text-2xl font-semibold">Kernow Pasta</h1>
+                <h1 className="text-sm md:text-2xl font-semibold">Pomodoro</h1>
             </div>
             <ul className="flex space-x-6 text-sm md:text-2xl">
                 {categories.map((category) => (
@@ -28,10 +28,6 @@ export default function NavBar() {
                     </li>
                 ))}
             </ul>
-            <div className="flex items-center space-x-4">
-                <Link href="/cart"><ShoppingCartIcon className="h-6 w-6 " /></Link>
-                <Link href='/api/auth/login'><UserIcon className="h-6 w-6 " /></Link>
-            </div>
         </nav>
     )
 }
